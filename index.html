@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mazakha Foundation — Growing Tomorrow's Leaders</title>
+<meta name="description" content="Mazakha Foundation invests in young people through mentorship, education and community growth programmes.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+:root{
+  --cream:#fbf8f0;
+  --green:#184d16;
+  --green2:#275f20;
+  --orange:#e8491b;
+  --gold:#9a6218;
+  --rust:#a63d24;
+  --ink:#1e231e;
+  --muted:#62645f;
+  --line:#ddd9ce;
+  --sage:#edf5df;
+  --sand:#fff0d9;
+  --rose:#f9e7df;
+  --white:#fff;
+  --space-xs:8px;
+  --space-sm:14px;
+  --space-md:20px;
+  --space-lg:32px;
+}
+/* Reset and base */
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;font-size:16px}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:"DM Sans",Arial,sans-serif;font-weight:400;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+
+/* Container: consistent horizontal padding while keeping max width */
+.container{width:min(1220px,100%);padding:0 40px;margin:0 auto}
+
+/* Header */
+header{height:108px;background:rgba(255,253,247,.97);border-bottom:1px solid #e7e3d9;display:flex;align-items:center;position:sticky;top:0;z-index:20}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:var(--space-md)}
+.logo{width:240px;height:70px;display:flex;align-items:center}
+.logo img{width:100%;height:100%;object-fit:contain;object-position:left center}
+nav{display:flex;align-items:center;gap:24px;font-weight:700}
+nav a{padding:10px 0;position:relative}
+nav a.active,nav a:hover{color:var(--orange)}
+nav a.active:after{content:"";height:3px;background:var(--orange);position:absolute;left:0;right:0;bottom:4px;border-radius:4px}
+.header-actions{display:flex;align-items:center;gap:18px}
+.donate{background:var(--orange);color:#fff;padding:11px 20px;border-radius:12px;font-weight:700;box-shadow:0 6px 14px #e8491b22}
+.lang{border:1px solid #d5d2c9;border-radius:12px;padding:9px 12px;background:#fff;display:flex;gap:8px;align-items:center;font-weight:600}
+.menu{display:none;border:0;background:none;font-size:28px}
+
+/* Hero */
+.hero{position:relative;min-height:620px;overflow:hidden;background:var(--cream);padding-bottom:var(--space-lg)}
+.hero-image{position:absolute;right:0;top:0;width:66%;height:100%;object-fit:cover;object-position:center;z-index:0}
+.hero:after{content:"";position:absolute;z-index:1;left:0;top:0;width:56%;height:100%;background:linear-gradient(90deg,var(--cream) 40%,rgba(251,248,240,.98) 60%,rgba(251,248,240,.15) 100%);pointer-events:none}
+.hero-content{position:relative;z-index:2;padding:72px 0 80px;width:clamp(260px,38%,520px)}
+.eyebrow{color:var(--orange);font-size:16px;font-weight:700;letter-spacing:.4px;margin-bottom:8px}
+.eyebrow span{color:var(--gold)}
+
+/* Headings & typography */
+h1,h2,h3{font-family:"Playfair Display",Georgia,serif;color:var(--green);font-weight:600;line-height:1.12;margin:0}
+h1{font-size:clamp(32px,6.5vw,58px);max-width:520px;margin:12px 0 18px}
+h2{font-size:clamp(22px,3.5vw,39px);margin:0 0 12px}
+.hero-copy{font-size:16px;color:#555851;max-width:480px;margin:0 0 22px}
+
+.buttons{display:flex;gap:16px}
+.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:12px;padding:12px 20px;font-size:15px;font-weight:700}
+.btn.primary{background:var(--orange);color:white}
+.btn.secondary{border:1.5px solid #aab19e;color:var(--green);background:rgba(255,255,255,.45)}
+
+/* Stats */
+.stats{position:relative;z-index:5;margin-top:-46px}
+.statbar{background:#fff;border-radius:16px;box-shadow:0 10px 28px rgba(45,50,36,.12);display:grid;grid-template-columns:repeat(3,1fr);padding:18px 28px;gap:8px}
+.stat{display:flex;align-items:center;gap:16px;padding:8px 20px;border-right:1px solid #e6e4dc}
+.stat:last-child{border-right:0}
+.icon{width:72px;height:72px;border-radius:50%;display:grid;place-items:center;font-size:32px;flex:none}
+.stat strong{display:block;font-size:26px;color:var(--green);line-height:1}
+.stat b{display:block;font-size:15px;margin:6px 0 2px}
+.stat small{color:#777;font-size:13px}
+
+/* Sections */
+section{padding:64px 0}
+.section-top{display:flex;justify-content:space-between;align-items:end;margin-bottom:20px}
+.section-label{font-weight:700;font-size:15px;margin-bottom:6px}
+.section-label.green{color:var(--green2)}
+.section-label.orange{color:var(--orange)}
+.section-label.gold{color:var(--gold)}
+.section-label.rust{color:var(--rust)}
+.view{color:var(--green);font-weight:700}
+.programs{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{border-radius:18px;padding:20px;min-height:220px}
+.card-icon{width:64px;height:64px;border-radius:16px;background:#ffffff80;display:grid;place-items:center;font-size:30px;margin-bottom:16px}
+.card h3{font-family:"DM Sans";font-size:18px;color:inherit;margin-bottom:8px;font-weight:700}
+.card p{color:#555852;font-size:15px;max-width:100%}
+.learn{display:inline-block;margin-top:10px;font-weight:700}
+.learn:after{content:"→";margin-left:9px;font-size:18px}
+
+/* Impact */
+.impact{background:#fff;border-top:1px solid #ece8dd;border-bottom:1px solid #ece8dd}
+.impact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.impact-copy p{font-size:16px;color:var(--muted);max-width:560px}
+.story-list{display:grid;gap:12px}
+.story{background:var(--cream);border-radius:14px;padding:14px 18px;display:flex;gap:14px;align-items:center}
+.story .round{width:50px;height:50px;border-radius:50%;display:grid;place-items:center;background:var(--sage);font-size:22px;color:var(--green)}
+.story h3{font-family:"DM Sans";font-size:16px;margin-bottom:4px}
+.story p{margin:0;color:#666;font-size:14px}
+
+/* Projects */
+.projects{display:grid;gap:12px}
+.project{background:#fff;border-radius:14px;padding:18px;display:grid;grid-template-columns:1fr 160px;gap:16px;border:1px solid #eee9de}
+.progress{height:10px;background:#edf0e7;border-radius:99px;overflow:hidden;margin:12px 0}
+.progress span{display:block;height:100%;background:#6ba22e;border-radius:99px}
+.project-meta{color:#777;font-size:13px}
+.project-side{text-align:right;display:flex;flex-direction:column;justify-content:center;align-items:end}
+.badge{padding:6px 12px;border-radius:999px;background:var(--sage);color:var(--green);font-weight:700;font-size:12px;display:inline-block}
+
+/* CTA */
+.cta{background:var(--green);color:#fff;border-radius:20px;padding:34px 36px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.cta h2{color:#fff;margin:0}
+.cta p{color:#d9e3cf;max-width:520px;font-size:15px;margin:0}
+.cta .primary{white-space:nowrap}
+
+/* Footer */
+footer{background:#12370f;color:#dbe5d5;padding:50px 0 25px;margin-top:56px}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:32px}
+.footer-logo{width:220px;height:64px;display:block;background:#fff;border-radius:10px;padding:6px}
+footer h4{color:#fff;margin:5px 0 12px;font-size:15px}
+footer a{display:block;margin:6px 0;color:#cbd8c7}
+.copyright{border-top:1px solid #ffffff22;margin-top:28px;padding-top:18px;color:#a9b9a5;font-size:13px}
+
+/* Responsive tweaks */
+@media(max-width:1000px){
+  .container{padding:0 28px}
+  nav{gap:16px}
+  .header-actions{gap:10px}
+  .logo{width:200px}
+  h1{font-size:50px}
+  .hero-image{width:62%}
+  .hero:after{width:64%}
+  .statbar{padding:16px}
+  .stat{padding:8px 10px}
+  .icon{width:60px;height:60px;font-size:26px}
+}
+@media(max-width:760px){
+  header{height:78px}
+  .container{padding:0 20px}
+  .logo{width:160px;height:52px}
+  nav,.header-actions .lang{display:none}
+  .menu{display:block}
+  .header-actions{margin-left:auto}
+  .donate{padding:8px 14px}
+  .hero{min-height:560px}
+  .hero-image{width:100%;height:360px;top:auto;bottom:0;object-position:center}
+  .hero:after{width:100%;height:100%;background:linear-gradient(180deg,var(--cream) 0%,rgba(251,248,240,.97) 45%,rgba(251,248,240,.1) 76%,rgba(251,248,240,0) 100%)}
+  .hero-content{width:auto;padding:28px 0 0}
+  h1{font-size:36px;margin:12px 0}
+  .hero-copy{font-size:15px;max-width:100%}
+  .stats{margin-top:0}
+  .statbar{grid-template-columns:1fr;gap:8px;padding:12px}
+  .stat{border-right:0;border-bottom:1px solid #eee;padding:12px 0}
+  .stat:last-child{border-bottom:0}
+  .programs{grid-template-columns:1fr}
+  .card{min-height:0}
+  section{padding:42px 0}
+  .section-top{display:block}
+  .view{display:inline-block;margin-top:12px}
+  h2{font-size:28px}
+  .impact-grid{grid-template-columns:1fr;gap:20px}
+  .project{grid-template-columns:1fr}
+  .project-side{text-align:left;align-items:start}
+  .cta{padding:22px 18px;display:block}
+  .cta .btn{margin-top:12px}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+</style>
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+<div id="site-header"></div>
+<script src="assets/js/includes.js"></script>
+
+<main id="home">
+  <section class="hero" style="background-image:url('assets/images/hero-community-opt.jpg');background-size:cover;background-position:center 30%;position:relative;padding:60px 0">
+  <div class="container hero-content">
+    <div class="eyebrow">growth <span>·</span> youth <span>·</span> community</div>
+    <h1>Planting the roots of tomorrow’s leaders</h1>
+    <p class="hero-copy">Mazakha Foundation invests in young people through youth empowerment, We Are Human and community development programs.</p>
+    <div class="buttons">
+      <a class="btn primary" href="#programs">Support a program</a>
+      <a class="btn secondary" href="about.html">Our story</a>
+    </div>
+  </div>
+</section>
+<div class="container stats">
+  <div class="statbar">
+    <div class="stat"><div class="icon">♧</div><div><strong>1,240</strong><b>youth mentored</b><small>Guided, supported, empowered</small></div></div>
+    <div class="stat"><div class="icon">▤</div><div><strong>86</strong><b>scholarships funded</b><small>Opening doors to education</small></div></div>
+    <div class="stat"><div class="icon">♧</div><div><strong>14</strong><b>communities reached</b><small>Stronger together</small></div></div>
+  </div>
+</div>
+<section id="programs">
+  <div class="container">
+    <div class="section-top">
+      <div><div class="section-label orange">our programs</div><h2>Where growth happens</h2></div>
+      <a class="view" href="#projects">View all programs&nbsp; →</a>
+    </div>
+    <div class="programs">
+      <article class="card green"><div class="card-icon">♧</div><h3>Youth mentorship</h3><p>1-on-1 mentoring pairing local leaders with young people, running weekly across 6 communities.</p><a class="learn" href="#stories">Learn more</a></article>
+      <article class="card gold"><div class="card-icon">▤</div><h3>Education access</h3><p>Scholarships, school supplies and after-school study support.</p><a class="learn" href="#projects">Learn more</a></article>
+      <article class="card rust"><div class="card-icon">♧</div><h3>Community growth</h3><p>Small local projects designed and led by the youth we serve.</p><a class="learn" href="#impact">Learn more</a></article>
+    </div>
+  </div>
+</section>
+<section class="impact" id="impact">
+  <div class="container impact-grid">
+    <div class="impact-copy">
+      <div class="section-label green">our impact</div>
+      <h2>Growth you can see</h2>
+      <p>Our work is built around practical opportunities that help young people grow into confident leaders and strengthen the communities around them.</p>
+      <a class="btn primary" href="#stories">See our stories</a>
+    </div>
+    <div class="story-list" id="stories">
+      <article class="story"><div class="round">♧</div><div><h3>Thandiwe’s story</h3><p>From mentee to mentor, now leading her own community project.</p></div></article>
+      <article class="story"><div class="round">▤</div><div><h3>Sipho’s story</h3><p>First in his family to finish school with a Mazakha scholarship.</p></div></article>
+    </div>
+  </div>
+</section>
+<section id="projects">
+  <div class="container">
+    <div class="section-top">
+      <div><div class="section-label gold">projects</div><h2>Initiatives you can back today</h2></div>
+    </div>
+    <div class="projects">
+      <article class="project"><div><h3>Winter school supplies drive</h3><p>Providing books and uniforms to 200 learners before term starts.</p><div class="progress"><span style="width:64%"></span></div><div class="project-meta">R64,000 raised of R100,000 · 18 days left</div></div><div class="project-side"><span class="badge">active</span></div></article>
+      <article class="project"><div><h3>Youth centre roof repair</h3><p>Fixing storm damage at our main mentorship venue.</p><div class="progress"><span style="width:30%"></span></div><div class="project-meta">R15,000 raised of R50,000 · 42 days left</div></div><div class="project-side"><span class="badge">active</span></div></article>
+      <article class="project"><div><h3>Summer leadership camp 2026</h3><p>A week-long camp for 60 youth leaders, fully funded.</p><div class="progress"><span style="width:100%"></span></div><div class="project-meta">R80,000 raised of R80,000 · closed</div></div><div class="project-side"><span class="badge">completed</span></div></article>
+    </div>
+  </div>
+</section>
+<section id="about">
+  <div class="container">
+    <div class="cta" id="donate">
+      <div><div class="section-label" style="color:#c7ddba">grow with us</div><h2>Help plant the roots of tomorrow.</h2><p>Every contribution helps create opportunities for young people to learn, lead and build stronger communities.</p></div>
+      <a class="btn primary" href="mailto:hello@mazakha.org">Support a program</a>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div><div class="footer-logo"><img src="assets/images/mazakha-logo-opt.jpg" alt="Mazakha Foundation"></div><p>Growth · youth · community</p></div>
+      <div><h4>Explore</h4><a href="#programs">Programs</a><a href="#impact">Impact</a><a href="#projects">Projects</a></div>
+      <div><h4>Stories</h4><a href="#stories">Youth stories</a><a href="about.html">Our story</a><a href="#donate">Donate</a></div>
+      <div><h4>Connect</h4><a href="mailto:hello@mazakha.org">hello@mazakha.org</a><a href="#home">South Africa</a></div>
+    </div>
+    <div class="copyright">© 2026 Mazakha Foundation. Building opportunities, one young person at a time.</div>
+  </div>
+</footer>
+<script>
+document.querySelector('.menu').addEventListener('click', () => {
+  const nav = document.querySelector('nav');
+  const visible = nav.style.display === 'flex';
+  nav.style.cssText = visible ? '' : 'display:flex;position:absolute;top:78px;left:0;right:0;background:#fffdf7;padding:18px 6%;flex-direction:column;gap:8px;border-bottom:1px solid #ddd;z-index:30';
+});
+</script>
+</body>
+</html>
+      <a class="btn secondary" href="#about">Our story</a>
+    </div>
+  </div>
+</section>
+
+<div class="container stats">
+  <div class="statbar">
+    <div class="stat"><div class="icon">♧</div><div><strong>1,240</strong><b>youth mentored</b><small>Guided, supported, empowered</small></div></div>
+    <div class="stat"><div class="icon">▤</div><div><strong>86</strong><b>scholarships funded</b><small>Opening doors to education</small></div></div>
+    <div class="stat"><div class="icon">♧</div><div><strong>14</strong><b>communities reached</b><small>Stronger together</small></div></div>
+  </div>
+</div>
+
+<section id="programs">
+  <div class="container">
+    <div class="section-top">
+      <div><div class="section-label orange">our programs</div><h2>Where growth happens</h2></div>
+      <a class="view" href="#projects">View all programs&nbsp; →</a>
+    </div>
+    <div class="programs">
+      <article class="card green"><div class="card-icon">♧</div><h3>Youth mentorship</h3><p>1-on-1 mentoring pairing local leaders with young people, running weekly across 6 communities.</p><a class="learn" href="#stories">Learn more</a></article>
+      <article class="card gold"><div class="card-icon">▤</div><h3>Education access</h3><p>Scholarships, school supplies and after-school study support.</p><a class="learn" href="#projects">Learn more</a></article>
+      <article class="card rust"><div class="card-icon">♧</div><h3>Community growth</h3><p>Small local projects designed and led by the youth we serve.</p><a class="learn" href="#impact">Learn more</a></article>
+    </div>
+  </div>
+</section>
+
+<section class="impact" id="impact">
+  <div class="container impact-grid">
+    <div class="impact-copy">
+      <div class="section-label green">our impact</div>
+      <h2>Growth you can see</h2>
+      <p>Our work is built around practical opportunities that help young people grow into confident leaders and strengthen the communities around them.</p>
+      <a class="btn primary" href="#stories">See our stories</a>
+    </div>
+    <div class="story-list" id="stories">
+      <article class="story"><div class="round">♧</div><div><h3>Thandiwe’s story</h3><p>From mentee to mentor, now leading her own community project.</p></div></article>
+      <article class="story"><div class="round">▤</div><div><h3>Sipho’s story</h3><p>First in his family to finish school with a Mazakha scholarship.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="container">
+    <div class="section-top">
+      <div><div class="section-label gold">projects</div><h2>Initiatives you can back today</h2></div>
+    </div>
+    <div class="projects">
+      <article class="project"><div><h3>Winter school supplies drive</h3><p>Providing books and uniforms to 200 learners before term starts.</p><div class="progress"><span style="width:64%"></span></div><div class="project-meta">R64,000 raised of R100,000 · 18 days left</div></div><div class="project-side"><span class="badge">active</span></div></article>
+      <article class="project"><div><h3>Youth centre roof repair</h3><p>Fixing storm damage at our main mentorship venue.</p><div class="progress"><span style="width:30%"></span></div><div class="project-meta">R15,000 raised of R50,000 · 42 days left</div></div><div class="project-side"><span class="badge">active</span></div></article>
+      <article class="project"><div><h3>Summer leadership camp 2026</h3><p>A week-long camp for 60 youth leaders, fully funded.</p><div class="progress"><span style="width:100%"></span></div><div class="project-meta">R80,000 raised of R80,000 · closed</div></div><div class="project-side"><span class="badge">completed</span></div></article>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <div class="cta" id="donate">
+      <div><div class="section-label" style="color:#c7ddba">grow with us</div><h2>Help plant the roots of tomorrow.</h2><p>Every contribution helps create opportunities for young people to learn, lead and build stronger communities.</p></div>
+      <a class="btn primary" href="mailto:hello@mazakha.org">Support a program</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div><div class="footer-logo"><img src="mazakha-logo.png" alt="Mazakha Foundation"></div><p>Growth · youth · community</p></div>
+      <div><h4>Explore</h4><a href="#programs">Programs</a><a href="#impact">Impact</a><a href="#projects">Projects</a></div>
+      <div><h4>Stories</h4><a href="#stories">Youth stories</a><a href="#about">Our story</a><a href="#donate">Donate</a></div>
+      <div><h4>Connect</h4><a href="mailto:hello@mazakha.org">hello@mazakha.org</a><a href="#home">South Africa</a></div>
+    </div>
+    <div class="copyright">© 2026 Mazakha Foundation. Building opportunities, one young person at a time.</div>
+  </div>
+  <div id="site-footer"></div>
+
+  <script>
+document.querySelector('.menu').addEventListener('click', () => {
+  const nav = document.querySelector('nav');
+  const visible = nav.style.display === 'flex';
+  nav.style.cssText = visible ? '' : 'display:flex;position:absolute;top:78px;left:0;right:0;background:#fffdf7;padding:18px 6%;flex-direction:column;gap:8px;border-bottom:1px solid #ddd;z-index:30';
+});
+</script>
+</body>
+</html>

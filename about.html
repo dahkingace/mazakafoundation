@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About — Mazakha Foundation</title>
+  <meta name="description" content="About Mazakha Foundation — mission, values and how we support young people.">
+  <meta name="theme-color" content="#184d16">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+</head>
+  <link rel="stylesheet" href="assets/css/site.css">
+
+  <style>
+    /* ==========================================================================
+       MAZAKHA FOUNDATION — CORE DESIGN SYSTEM
+       ========================================================================== */
+    :root {
+      --cream: #fbf8f0;
+      --cream-light: #fffdf7;
+      --green: #184d16;
+      --green2: #275f20;
+      --green-dark: #12370f;
+      --orange: #e8491b;
+      --orange-hover: #c93b12;
+      --gold: #9a6218;
+      --gold-dark: #805313;
+      --rust: #a63d24;
+      --ink: #1e231e;
+      --muted: #62645f;
+      --line: #ddd9ce;
+      --line-light: #e7e3d9;
+      --sage: #edf5df;
+      --sand: #fff0d9;
+      --rose: #f9e7df;
+      --white: #ffffff;
+      
+      --shadow-sm: 0 4px 12px rgba(24, 77, 22, 0.06);
+      --shadow-md: 0 10px 35px rgba(45, 50, 36, 0.12);
+      --shadow-lg: 0 20px 50px rgba(24, 77, 22, 0.16);
+      --radius-sm: 10px;
+      --radius-md: 14px;
+      --radius-lg: 22px;
+      --radius-xl: 28px;
+      --transition: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: "DM Sans", Arial, -apple-system, sans-serif;
+      font-weight: 500;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: color var(--transition), transform var(--transition);
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      background: none;
+      transition: all var(--transition);
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .container {
+      width: min(1220px, calc(100% - 80px));
+      margin-inline: auto;
+    }
+
+    /* Basic theme elements copied from the main page for visual parity */
+    h1, h2, h3, h4 { font-family: "Playfair Display", Georgia, serif; color: var(--green); }
+    .section-label { font-family: "DM Sans", sans-serif; font-weight:700 }
+    .hero { background-position:center; }
+  </style>
+</head>
+<body>
+  <aside class="top-banner" role="complementary">
+    <div class="container">
+      🌱 <strong>2026 Winter Drive:</strong> Helping 200 high school learners with books, uniforms, and study support.
+      <a href="#projects">Back this drive &rarr;</a>
+    </div>
+  </aside>
+
+  <header>
+    <div class="container nav">
+      <!-- Brand Logo -->
+      <!-- Brand Logo (Official Vector Emblem) -->
+      <a class="logo" href="#home" aria-label="Mazakha Foundation Homepage">
+        <svg viewBox="0 0 290 68" width="220" height="52" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="hSunGrad" cx="38%" cy="32%" r="68%">
+              <stop offset="0%" stop-color="#FFA149"/>
+              <stop offset="55%" stop-color="#E85827"/>
+              <stop offset="100%" stop-color="#B83812"/>
+            </radialGradient>
+            <linearGradient id="hLeftPetalGrad" x1="10%" y1="100%" x2="30%" y2="0%">
+              <stop offset="0%" stop-color="#D14317"/>
+              <stop offset="40%" stop-color="#EC6523"/>
+              <stop offset="75%" stop-color="#F8A232"/>
+              <stop offset="100%" stop-color="#FDC858"/>
+            </linearGradient>
+            <linearGradient id="hRightWingBackGrad" x1="0%" y1="100%" x2="90%" y2="0%">
+              <stop offset="0%" stop-color="#168567" stop-opacity="0.75"/>
+              <stop offset="60%" stop-color="#2AB591" stop-opacity="0.85"/>
+              <stop offset="100%" stop-color="#4CDCB4" stop-opacity="0.95"/>
+            </linearGradient>
+            <linearGradient id="hRightPetalGrad" x1="10%" y1="100%" x2="85%" y2="0%">
+              <stop offset="0%" stop-color="#0E4839"/>
+              <stop offset="35%" stop-color="#12785E"/>
+              <stop offset="75%" stop-color="#1B9E7B"/>
+              <stop offset="100%" stop-color="#2BC199"/>
+            </linearGradient>
+            <linearGradient id="hTextOrange" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#ED602B"/>
+              <stop offset="100%" stop-color="#D74818"/>
+            </linearGradient>
+          </defs>
+          <g transform="translate(0, 2) scale(0.68)">
+            <circle cx="48" cy="18" r="13" fill="url(#hSunGrad)"/>
+            <ellipse cx="44" cy="13.5" rx="3.2" ry="2" fill="#FFFFFF" opacity="0.65" transform="rotate(-20 44 13.5)"/>
+            <path d="M55 64 C62 50 74 38 82 28 C84 25 87 24 88 27 C87 32 78 49 70 66 C65 76 60 87 56 94 Z" fill="url(#hRightWingBackGrad)"/>
+            <path d="M46 95 C40 94 33 88 29 78 C23 65 25 45 16 24 C15 21 17 21 19 23 C30 33 37 52 37 70 C37 81 41 91 46 95 Z" fill="url(#hLeftPetalGrad)"/>
+            <path d="M48 95 C53 93 59 86 63 76 C67 63 65 45 73 25 C74 22 72 22 70 24 C61 34 55 52 56 70 C56 81 52 91 48 95 Z" fill="url(#hRightPetalGrad)"/>
+          </g>
+          <g transform="translate(74, 0)">
+            <text x="0" y="38" font-family="'DM Sans', 'Montserrat', Arial, sans-serif" font-weight="700" font-size="34" fill="url(#hTextOrange)" letter-spacing="0.5">Mazakha</text>
+            <g transform="translate(0, 52)">
+              <line x1="0" y1="-4" x2="32" y2="-4" stroke="#104A3C" stroke-width="1.8" stroke-linecap="round"/>
+              <text x="73" y="0" font-family="'DM Sans', Arial, sans-serif" font-weight="600" font-size="12" text-anchor="middle" fill="#104A3C" letter-spacing="2.2">Foundation</text>
+              <line x1="114" y1="-4" x2="146" y2="-4" stroke="#104A3C" stroke-width="1.8" stroke-linecap="round"/>
+            </g>
+          </g>
+        </svg>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav id="site-nav" aria-label="Main Navigation">
+        <a class="active" href="#home">Home</a>
+        <a href="#programs">Programs</a>
+        <a href="#impact">Impact</a>
+        <a href="#projects">Projects</a>
+        <a href="#stories">Stories</a>
+        <a href="about.html">About</a>
+      </nav>
+
+      <!-- Action Area -->
+      <div class="header-actions">
+        <button class="donate" type="button" id="open-donate-btn">
+          <span>Donate</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+        </button>
+        
+        <div class="lang-container">
+          <button class="lang" type="button" id="lang-btn" aria-haspopup="true">🌐 &nbsp;<span id="lang-label">EN</span>⌄</button>
+          <div class="lang-dropdown" id="lang-menu">
+            <button class="lang-item active" type="button" data-lang="EN">English (EN)</button>
+            <button class="lang-item" type="button" data-lang="XH">isiXhosa (XH)</button>
+            <button class="lang-item" type="button" data-lang="ZU">isiZulu (ZU)</button>
+            <button class="lang-item" type="button" data-lang="AF">Afrikaans (AF)</button>
+          </div>
+        </div>
+
+        <button class="menu" type="button" aria-label="Open menu" id="menu-btn">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" style="background-image:url('assets/images/hero-community-opt.jpg');background-size:cover;background-position:center 30%;position:relative;padding:60px 0">
+      <div class="container hero-content">
+        <div class="eyebrow">growth <span>·</span> youth <span>·</span> community</div>
+        <h1>About Mazakha Foundation</h1>
+        <p class="hero-copy">Mazakha Foundation supports young people through youth empowerment, the We Are Human education programme, and community development initiatives that strengthen families and neighbourhoods.</p>
+        <div class="buttons">
+          <a class="btn primary" href="index 3.html#programs">See programs &rarr;</a>
+          <a class="btn secondary" href="index 3.html#stories">Our stories</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" style="padding:56px 0;">
+      <div style="max-width:880px;margin:auto;">
+        <div class="section-label green">who we are</div>
+        <h2>Planting the roots of tomorrow’s leaders</h2>
+        <p style="color:#555; font-size:17px; line-height:1.6; margin-top:12px;">Founded to expand access to learning and leadership opportunities, Mazakha Foundation partners with local leaders, schools and donors to deliver mentorship, scholarships and community-led projects. We prioritise dignity, practical skills and long-term relationships that allow young people to thrive.</p>
+
+        <h3 style="margin-top:22px;">Our approach</h3>
+        <ul style="margin-top:8px; color:#555; line-height:1.6;">
+          <li><strong>Youth empowerment:</strong> One-on-one mentorship and leadership development.</li>
+          <li><strong>We Are Human:</strong> Education supports, scholarships and after-school learning.</li>
+          <li><strong>Community development:</strong> Local projects led by young people that build skills and safe spaces.</li>
+        </ul>
+
+        <h3 style="margin-top:22px;">Get involved</h3>
+        <p style="color:#555; line-height:1.6;">Support our work by donating, volunteering as a mentor, or partnering on a local project. Every contribution helps create opportunities for youth to learn, lead and build stronger communities across South Africa.</p>
+        <button class="btn primary" onclick="openDonate('General Youth Fund')">Support a program</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">
+            <svg viewBox="0 0 290 68" width="210" height="50" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <radialGradient id="fSunGrad" cx="38%" cy="32%" r="68%">
+                  <stop offset="0%" stop-color="#FFA149"/>
+                  <stop offset="55%" stop-color="#E85827"/>
+                  <stop offset="100%" stop-color="#B83812"/>
+                </radialGradient>
+                <linearGradient id="fLeftPetalGrad" x1="10%" y1="100%" x2="30%" y2="0%">
+                  <stop offset="0%" stop-color="#D14317"/>
+                  <stop offset="40%" stop-color="#EC6523"/>
+                  <stop offset="75%" stop-color="#F8A232"/>
+                  <stop offset="100%" stop-color="#FDC858"/>
+                </linearGradient>
+                <linearGradient id="fRightWingBackGrad" x1="0%" y1="100%" x2="90%" y2="0%">
+                  <stop offset="0%" stop-color="#168567" stop-opacity="0.75"/>
+                  <stop offset="60%" stop-color="#2AB591" stop-opacity="0.85"/>
+                  <stop offset="100%" stop-color="#4CDCB4" stop-opacity="0.95"/>
+                </linearGradient>
+                <linearGradient id="fRightPetalGrad" x1="10%" y1="100%" x2="85%" y2="0%">
+                  <stop offset="0%" stop-color="#0E4839"/>
+                  <stop offset="35%" stop-color="#12785E"/>
+                  <stop offset="75%" stop-color="#1B9E7B"/>
+                  <stop offset="100%" stop-color="#2BC199"/>
+                </linearGradient>
+                <linearGradient id="fTextOrange" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#ED602B"/>
+                  <stop offset="100%" stop-color="#D74818"/>
+                </linearGradient>
+              </defs>
+              <g transform="translate(0, 2) scale(0.68)">
+                <circle cx="48" cy="18" r="13" fill="url(#fSunGrad)"/>
+                <ellipse cx="44" cy="13.5" rx="3.2" ry="2" fill="#FFFFFF" opacity="0.65" transform="rotate(-20 44 13.5)"/>
+                <path d="M55 64 C62 50 74 38 82 28 C84 25 87 24 88 27 C87 32 78 49 70 66 C65 76 60 87 56 94 Z" fill="url(#fRightWingBackGrad)"/>
+                <path d="M46 95 C40 94 33 88 29 78 C23 65 25 45 16 24 C15 21 17 21 19 23 C30 33 37 52 37 70 C37 81 41 91 46 95 Z" fill="url(#fLeftPetalGrad)"/>
+                <path d="M48 95 C53 93 59 86 63 76 C67 63 65 45 73 25 C74 22 72 22 70 24 C61 34 55 52 56 70 C56 81 52 91 48 95 Z" fill="url(#fRightPetalGrad)"/>
+              </g>
+              <g transform="translate(74, 0)">
+                <text x="0" y="38" font-family="'DM Sans', 'Montserrat', Arial, sans-serif" font-weight="700" font-size="34" fill="url(#fTextOrange)" letter-spacing="0.5">Mazakha</text>
+                <g transform="translate(0, 52)">
+                  <line x1="0" y1="-4" x2="32" y2="-4" stroke="#104A3C" stroke-width="1.8" stroke-linecap="round"/>
+                  <text x="73" y="0" font-family="'DM Sans', Arial, sans-serif" font-weight="600" font-size="12" text-anchor="middle" fill="#104A3C" letter-spacing="2.2">Foundation</text>
+                  <line x1="114" y1="-4" x2="146" y2="-4" stroke="#104A3C" stroke-width="1.8" stroke-linecap="round"/>
+                </g>
+              </g>
+            </svg>
+          </div>
+          <p>Growth · Youth · Community</p>
+          <p style="margin-top:8px; font-size:13px;">Section 18A PBO No. 930074122</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <a href="#programs">Programs</a>
+          <a href="#impact">Impact</a>
+          <a href="#projects">Projects</a>
+        </div>
+        <div>
+          <h4>Stories</h4>
+          <a href="#stories">Youth stories</a>
+          <a href="#about">Our story</a>
+          <a href="#donate">Donate</a>
+        </div>
+        <div>
+          <h4>Connect</h4>
+          <a href="mailto:hello@mazakha.org">hello@mazakha.org</a>
+          <a href="#home">Cape Town &amp; Gqeberha</a>
+          <a href="#home">South Africa</a>
+        </div>
+      </div>
+      <div class="copyright">
+        <span>© 2026 Mazakha Foundation. Building opportunities, one young person at a time.</span>
+        <span>Section 18A Tax Deductible</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Donation Modal (minimal markup reused from site) -->
+  <div class="modal" id="donate-modal">
+    <div class="modal-overlay" onclick="closeModals()"></div>
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModals()" aria-label="Close">&times;</button>
+      <div class="section-label orange">invest in youth</div>
+      <h3 style="font-size:24px; color:var(--green); margin-bottom:6px;">Make an Impact</h3>
+      <p id="target-project-label" style="font-size:14.5px; color:#666; margin-bottom:14px;">Supporting general youth development &amp; mentorship.</p>
+      <div class="amount-pills">
+        <button type="button" class="amount-pill active" onclick="setAmt(150, this)">R150</button>
+        <button type="button" class="amount-pill" onclick="setAmt(350, this)">R350</button>
+        <button type="button" class="amount-pill" onclick="setAmt(750, this)">R750</button>
+        <button type="button" class="amount-pill" onclick="setAmt(1500, this)">R1,500</button>
+      </div>
+      <input type="number" class="custom-amt" id="custom-amt-input" placeholder="Or custom amount in Rands (ZAR)" oninput="customAmtChange(this.value)">
+      <div class="impact-calc" id="impact-text">🌱 <strong>R150</strong> provides full stationery and study notebooks for 1 learner.</div>
+      <button class="btn primary" style="width:100%;" onclick="confirmDonation()">Complete Secure Donation</button>
+    </div>
+  </div>
+
+  <!-- Story Modal -->
+  <div class="modal" id="story-modal">
+    <div class="modal-overlay" onclick="closeModals()"></div>
+    <div class="modal-box" style="max-width:580px;">
+      <button class="modal-close" onclick="closeModals()" aria-label="Close">&times;</button>
+      <div id="story-modal-content"></div>
+    </div>
+  </div>
+
+  <script>
+    // Basic interactivity reused from main site
+    const menuBtn = document.getElementById('menu-btn');
+    const nav = document.getElementById('site-nav');
+    if (menuBtn && nav) {
+      menuBtn.addEventListener('click', () => {
+        const visible = nav.style.display === 'flex';
+        nav.style.cssText = visible ? '' : 'display:flex;position:absolute;top:78px;left:0;right:0;background:#fffdf7;padding:22px 7%;flex-direction:column;gap:14px;border-bottom:1px solid #ddd;box-shadow:0 12px 30px rgba(0,0,0,0.1);z-index:40';
+      });
+    }
+
+    const langBtn = document.getElementById('lang-btn');
+    const langMenu = document.getElementById('lang-menu');
+    const langLabel = document.getElementById('lang-label');
+    if (langBtn) {
+      langBtn.addEventListener('click', (e) => { e.stopPropagation(); langMenu.classList.toggle('show'); });
+    }
+    document.querySelectorAll('.lang-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const lang = item.getAttribute('data-lang');
+        langLabel.textContent = lang;
+        document.querySelectorAll('.lang-item').forEach(i => i.classList.remove('active'));
+        item.classList.add('active');
+        langMenu.classList.remove('show');
+      });
+    });
+    document.addEventListener('click', () => { if (langMenu) langMenu.classList.remove('show'); });
+
+    // Donate modal controls
+    let currentAmt = 150;
+    const donateModal = document.getElementById('donate-modal');
+    const openDonateBtn = document.getElementById('open-donate-btn');
+    function openDonate(projectName = 'General Youth Fund') {
+      const targetProjectLabel = document.getElementById('target-project-label');
+      if (targetProjectLabel) targetProjectLabel.textContent = `Supporting: ${projectName}`;
+      if (donateModal) donateModal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    if (openDonateBtn) openDonateBtn.addEventListener('click', () => openDonate());
+    function closeModals() { document.querySelectorAll('.modal').forEach(m => m.classList.remove('open')); document.body.style.overflow = ''; }
+    function setAmt(val, btn) { currentAmt = val; document.querySelectorAll('.amount-pill').forEach(b => b.classList.remove('active')); if (btn) btn.classList.add('active'); const custom = document.getElementById('custom-amt-input'); if (custom) custom.value = ''; updateImpact(val); }
+    function customAmtChange(val) { const num = parseInt(val, 10); if (num > 0) { currentAmt = num; document.querySelectorAll('.amount-pill').forEach(b => b.classList.remove('active')); updateImpact(num); } }
+    function updateImpact(amt) { const impactText = document.getElementById('impact-text'); if (!impactText) return; if (amt < 250) { impactText.innerHTML = `🌱 <strong>R${amt}</strong> provides full stationery and study notebooks for 1 learner.`; } else if (amt < 600) { impactText.innerHTML = `🌱 <strong>R${amt}</strong> funds 1 month of weekly 1-on-1 mentorship sessions and materials.`; } else if (amt < 1200) { impactText.innerHTML = `🌱 <strong>R${amt}</strong> provides after-school STEM tutoring and nutritious meal packs.`; } else { impactText.innerHTML = `🌱 <strong>R${amt}</strong> covers a full term education scholarship including fees and uniforms.`; } }
+    function confirmDonation() { alert(`Enkosi kakhulu! Thank you for your generous pledge of R${currentAmt}. You will be redirected to the secure payment portal.`); closeModals(); }
+
+    // Story modal placeholder
+    const storyData = {};
+    function showStory() { }
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModals(); });
+  </script>
+</body>
+</html>

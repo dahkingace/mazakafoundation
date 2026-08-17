@@ -1,0 +1,1540 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mazakha Foundation — Growing Tomorrow's Leaders</title>
+  <meta name="description" content="Mazakha Foundation invests in young people across South Africa through mentorship, education access, and community growth programmes.">
+  <meta name="theme-color" content="#184d16">
+
+  <!-- Google Fonts: DM Sans & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css">
+
+  <style>
+    /* ==========================================================================
+       MAZAKHA FOUNDATION — CORE DESIGN SYSTEM
+       ========================================================================== */
+    :root {
+      --cream: #fbf8f0;
+      --cream-light: #fffdf7;
+      --green: #184d16;
+      --green2: #275f20;
+      --green-dark: #12370f;
+      --orange: #e8491b;
+      --orange-hover: #c93b12;
+      --gold: #9a6218;
+      --gold-dark: #805313;
+      --rust: #a63d24;
+      --ink: #1e231e;
+      --muted: #62645f;
+      --line: #ddd9ce;
+      --line-light: #e7e3d9;
+      --sage: #edf5df;
+      --sand: #fff0d9;
+      --rose: #f9e7df;
+      --white: #ffffff;
+      
+      --shadow-sm: 0 4px 12px rgba(24, 77, 22, 0.06);
+      --shadow-md: 0 10px 35px rgba(45, 50, 36, 0.12);
+      --shadow-lg: 0 20px 50px rgba(24, 77, 22, 0.16);
+      --radius-sm: 10px;
+      --radius-md: 14px;
+      --radius-lg: 22px;
+      --radius-xl: 28px;
+      --transition: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: "DM Sans", Arial, -apple-system, sans-serif;
+      font-weight: 500;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: color var(--transition), transform var(--transition);
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      background: none;
+      transition: all var(--transition);
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .container {
+      width: min(1220px, calc(100% - 80px));
+      margin-inline: auto;
+    }
+
+    /* --------------------------------------------------
+       Typography
+       -------------------------------------------------- */
+    h1, h2, h3, h4 {
+      font-family: "Playfair Display", Georgia, serif;
+      color: var(--green);
+      font-weight: 600;
+      line-height: 1.12;
+    }
+
+    .section-label {
+      font-family: "DM Sans", sans-serif;
+      font-weight: 700;
+      font-size: 17px;
+      margin-bottom: 8px;
+      letter-spacing: 0.02em;
+      text-transform: lowercase;
+    }
+
+    .section-label.green { color: var(--green2); }
+    .section-label.orange { color: var(--orange); }
+    .section-label.gold { color: var(--gold); }
+    .section-label.rust { color: var(--rust); }
+
+    h2 {
+      font-size: 39px;
+      color: var(--green);
+    }
+
+    /* --------------------------------------------------
+       Announcement Banner
+       -------------------------------------------------- */
+    .top-banner {
+      background: var(--green-dark);
+      color: #dbe5d5;
+      font-size: 13.5px;
+      padding: 8px 0;
+      text-align: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .top-banner a {
+      color: #f7ba55;
+      font-weight: 700;
+      margin-left: 6px;
+    }
+
+    .top-banner a:hover {
+      text-decoration: underline;
+    }
+
+    /* --------------------------------------------------
+       Header & Navigation
+       -------------------------------------------------- */
+    header {
+      height: 98px;
+      background: rgba(255, 253, 247, 0.96);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line-light);
+      display: flex;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      transition: height var(--transition);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      color: var(--green);
+    }
+
+    .logo svg {
+      height: 48px;
+      width: auto;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 38px;
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    nav a {
+      padding: 10px 0;
+      position: relative;
+      color: var(--ink);
+    }
+
+    nav a.active, nav a:hover {
+      color: var(--orange);
+    }
+
+    nav a.active::after {
+      content: "";
+      height: 3px;
+      background: var(--orange);
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 2px;
+      border-radius: 4px;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .donate {
+      background: var(--orange);
+      color: #ffffff;
+      padding: 13px 26px;
+      border-radius: var(--radius-md);
+      font-weight: 700;
+      font-size: 15px;
+      box-shadow: 0 5px 14px rgba(232, 73, 27, 0.24);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .donate:hover {
+      background: var(--orange-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(232, 73, 27, 0.32);
+      color: #ffffff;
+    }
+
+    /* Language Switcher */
+    .lang-container {
+      position: relative;
+    }
+
+    .lang {
+      border: 1px solid #d5d2c9;
+      border-radius: var(--radius-md);
+      padding: 11px 16px;
+      background: #ffffff;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--ink);
+    }
+
+    .lang:hover {
+      border-color: var(--green);
+    }
+
+    .lang-dropdown {
+      position: absolute;
+      top: calc(100% + 6px);
+      right: 0;
+      background: #ffffff;
+      border: 1px solid var(--line-light);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-md);
+      width: 150px;
+      padding: 6px;
+      display: none;
+      flex-direction: column;
+      z-index: 60;
+    }
+
+    .lang-dropdown.show {
+      display: flex;
+    }
+
+    .lang-item {
+      padding: 8px 12px;
+      text-align: left;
+      font-size: 13.5px;
+      font-weight: 600;
+      border-radius: 8px;
+      color: var(--ink);
+    }
+
+    .lang-item:hover, .lang-item.active {
+      background: var(--sage);
+      color: var(--green);
+    }
+
+    .menu {
+      display: none;
+      border: 0;
+      background: none;
+      font-size: 28px;
+      color: var(--green);
+      padding: 4px;
+    }
+
+    /* --------------------------------------------------
+       Hero Section
+       -------------------------------------------------- */
+    .hero {
+      position: relative;
+      min-height: 640px;
+      overflow: hidden;
+      background: var(--cream);
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-image {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 72%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+      z-index: 0;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 58%;
+      height: 100%;
+      background: linear-gradient(90deg, 
+        var(--cream) 45%, 
+        rgba(251, 248, 240, 0.98) 62%, 
+        rgba(251, 248, 240, 0.15) 100%
+      );
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 80px 0 95px;
+      width: 540px;
+    }
+
+    .eyebrow {
+      color: var(--orange);
+      font-size: 19px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 12px;
+    }
+
+    .eyebrow span {
+      color: var(--gold);
+    }
+
+    h1 {
+      font-size: 58px;
+      max-width: 520px;
+      margin: 18px 0 22px;
+      line-height: 1.08;
+    }
+
+    .hero-copy {
+      font-size: 19px;
+      color: #555851;
+      max-width: 440px;
+      margin-bottom: 32px;
+      line-height: 1.6;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      padding: 15px 28px;
+      font-size: 16.5px;
+      font-weight: 700;
+      gap: 8px;
+      transition: all var(--transition);
+    }
+
+    .btn.primary {
+      background: var(--orange);
+      color: #ffffff;
+      box-shadow: 0 5px 15px rgba(232, 73, 27, 0.24);
+    }
+
+    .btn.primary:hover {
+      background: var(--orange-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(232, 73, 27, 0.32);
+      color: #ffffff;
+    }
+
+    .btn.secondary {
+      border: 1.5px solid #aab19e;
+      color: var(--green);
+      background: rgba(255, 255, 255, 0.65);
+      backdrop-filter: blur(8px);
+    }
+
+    .btn.secondary:hover {
+      background: #ffffff;
+      border-color: var(--green);
+      transform: translateY(-2px);
+    }
+
+    /* --------------------------------------------------
+       Stats Bar
+       -------------------------------------------------- */
+    .stats {
+      position: relative;
+      z-index: 5;
+      margin-top: -60px;
+    }
+
+    .statbar {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      padding: 28px 36px;
+      border: 1px solid #f0eee6;
+    }
+
+    .stat {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 6px 30px;
+      border-right: 1px solid #e6e4dc;
+    }
+
+    .stat:last-child {
+      border-right: 0;
+    }
+
+    .icon {
+      width: 76px;
+      height: 76px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      flex: none;
+    }
+
+    .icon svg {
+      width: 34px;
+      height: 34px;
+    }
+
+    .stat:nth-child(1) .icon { background: var(--sage); color: var(--green2); }
+    .stat:nth-child(2) .icon { background: var(--sand); color: var(--gold); }
+    .stat:nth-child(3) .icon { background: var(--rose); color: var(--rust); }
+
+    .stat strong {
+      display: block;
+      font-size: 32px;
+      color: var(--green);
+      line-height: 1;
+      font-family: "Playfair Display", Georgia, serif;
+    }
+
+    .stat:nth-child(2) strong { color: #875514; }
+    .stat:nth-child(3) strong { color: #94361f; }
+
+    .stat b {
+      display: block;
+      font-size: 17px;
+      margin: 6px 0 2px;
+      color: var(--ink);
+      font-family: "DM Sans", sans-serif;
+    }
+
+    .stat small {
+      color: #777;
+      font-size: 13.5px;
+      line-height: 1.4;
+      display: block;
+    }
+
+    /* --------------------------------------------------
+       Sections General
+       -------------------------------------------------- */
+    section {
+      padding: 84px 0;
+    }
+
+    .section-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 34px;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .view {
+      color: var(--green);
+      font-weight: 700;
+      font-size: 16px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all var(--transition);
+    }
+
+    .view:hover {
+      color: var(--orange);
+      transform: translateX(4px);
+    }
+
+    /* --------------------------------------------------
+       Programs Section
+       -------------------------------------------------- */
+    .programs {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 26px;
+    }
+
+    .card {
+      border-radius: var(--radius-lg);
+      padding: 32px 28px;
+      min-height: 270px;
+      display: flex;
+      flex-direction: column;
+      transition: transform var(--transition), box-shadow var(--transition);
+      border: 1px solid transparent;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .card.green {
+      background: var(--sage);
+      color: var(--green2);
+      border-color: #e0eed1;
+    }
+
+    .card.gold {
+      background: var(--sand);
+      color: var(--gold-dark);
+      border-color: #f7e6cb;
+    }
+
+    .card.rust {
+      background: var(--rose);
+      color: #9a3a23;
+      border-color: #f2d7cc;
+    }
+
+    .card-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.85);
+      display: grid;
+      place-items: center;
+      margin-bottom: 20px;
+      flex-shrink: 0;
+    }
+
+    .card-icon svg {
+      width: 30px;
+      height: 30px;
+    }
+
+    .card h3 {
+      font-family: "DM Sans", sans-serif;
+      font-size: 22px;
+      color: inherit;
+      margin-bottom: 10px;
+      font-weight: 750;
+    }
+
+    .card p {
+      color: #555852;
+      font-size: 15.5px;
+      line-height: 1.55;
+      margin-bottom: 18px;
+    }
+
+    .learn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: auto;
+      font-weight: 700;
+      font-size: 15px;
+      color: inherit;
+    }
+
+    .learn:hover {
+      text-decoration: underline;
+      gap: 10px;
+    }
+
+    /* --------------------------------------------------
+       Impact Section
+       -------------------------------------------------- */
+    .impact {
+      background: #ffffff;
+      border-top: 1px solid #ece8dd;
+      border-bottom: 1px solid #ece8dd;
+    }
+
+    .impact-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .impact-copy p {
+      font-size: 18px;
+      color: var(--muted);
+      max-width: 540px;
+      margin-block: 16px 28px;
+    }
+
+    .story-list {
+      display: grid;
+      gap: 18px;
+    }
+
+    .story {
+      background: var(--cream);
+      border-radius: 18px;
+      padding: 20px 24px;
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      border: 1px solid #eee9de;
+      transition: all var(--transition);
+      cursor: pointer;
+    }
+
+    .story:hover {
+      background: #ffffff;
+      border-color: var(--line);
+      transform: translateX(4px);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .story .round {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: var(--sage);
+      color: var(--green);
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+
+    .story .round img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .story h3 {
+      font-family: "DM Sans", sans-serif;
+      font-size: 18.5px;
+      margin-bottom: 3px;
+      color: var(--green);
+      font-weight: 700;
+    }
+
+    .story p {
+      margin: 0;
+      color: #666666;
+      font-size: 14.5px;
+      line-height: 1.45;
+    }
+
+    /* --------------------------------------------------
+       Projects Section
+       -------------------------------------------------- */
+    .projects {
+      display: grid;
+      gap: 18px;
+    }
+
+    .project {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 26px 30px;
+      display: grid;
+      grid-template-columns: 1fr 190px;
+      gap: 24px;
+      border: 1px solid #eee9de;
+      align-items: center;
+      transition: all var(--transition);
+    }
+
+    .project:hover {
+      border-color: #ded9cd;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .project h3 {
+      font-family: "DM Sans", sans-serif;
+      font-size: 20px;
+      font-weight: 750;
+      color: var(--green);
+      margin-bottom: 4px;
+    }
+
+    .project p {
+      color: #555852;
+      font-size: 15px;
+      margin-bottom: 12px;
+    }
+
+    .progress {
+      height: 10px;
+      background: #edf0e7;
+      border-radius: 99px;
+      overflow: hidden;
+      margin: 12px 0 8px;
+    }
+
+    .progress span {
+      display: block;
+      height: 100%;
+      background: #6ba22e;
+      border-radius: 99px;
+      transition: width 1s ease;
+    }
+
+    .project:nth-child(2) .progress { background: #faedd8; }
+    .project:nth-child(2) .progress span { background: #c27a13; }
+    .project:nth-child(3) .progress { background: #eee; }
+    .project:nth-child(3) .progress span { background: #aaa; }
+
+    .project-meta {
+      color: #777;
+      font-size: 13.5px;
+      font-weight: 600;
+    }
+
+    .project-side {
+      text-align: right;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+      gap: 10px;
+    }
+
+    .badge {
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: var(--sage);
+      color: var(--green);
+      font-weight: 700;
+      font-size: 12.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .project:nth-child(2) .badge { background: var(--sand); color: #875514; }
+    .project:nth-child(3) .badge { background: #eee; color: #777; }
+
+    .back-btn {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--orange);
+      padding: 4px 8px;
+    }
+
+    .back-btn:hover {
+      text-decoration: underline;
+    }
+
+    /* --------------------------------------------------
+       CTA / Support Section
+       -------------------------------------------------- */
+    .cta {
+      background: var(--green);
+      color: #ffffff;
+      border-radius: var(--radius-xl);
+      padding: 60px 65px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .cta h2 {
+      color: #ffffff;
+      font-size: 38px;
+      margin-block: 6px 14px;
+    }
+
+    .cta p {
+      color: #d9e3cf;
+      max-width: 620px;
+      font-size: 17.5px;
+      line-height: 1.6;
+    }
+
+    .cta .primary {
+      white-space: nowrap;
+      flex-shrink: 0;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    }
+
+    /* --------------------------------------------------
+       Footer
+       -------------------------------------------------- */
+    footer {
+      background: var(--green-dark);
+      color: #dbe5d5;
+      padding: 65px 0 30px;
+      margin-top: 60px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr 1fr;
+      gap: 48px;
+    }
+
+    .footer-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 8px 16px;
+      margin-bottom: 14px;
+    }
+
+    .footer-logo svg {
+      height: 42px;
+      width: auto;
+    }
+
+    footer p {
+      color: #a9b9a5;
+      font-size: 14.5px;
+    }
+
+    footer h4 {
+      color: #ffffff;
+      font-family: "DM Sans", sans-serif;
+      margin: 0 0 16px;
+      font-size: 16.5px;
+      font-weight: 700;
+    }
+
+    footer a {
+      display: block;
+      margin: 9px 0;
+      color: #cbd8c7;
+      font-size: 14.5px;
+    }
+
+    footer a:hover {
+      color: #f7ba55;
+      transform: translateX(3px);
+    }
+
+    .copyright {
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      margin-top: 45px;
+      padding-top: 24px;
+      color: #a9b9a5;
+      font-size: 13.5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    /* --------------------------------------------------
+       Interactive Modals (Donation & Story Viewer)
+       -------------------------------------------------- */
+    .modal {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: grid;
+      place-items: center;
+      padding: 20px;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.25s ease, visibility 0.25s;
+    }
+
+    .modal.open {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .modal-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(18, 55, 15, 0.7);
+      backdrop-filter: blur(5px);
+    }
+
+    .modal-box {
+      position: relative;
+      z-index: 2;
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      padding: 38px 34px;
+      width: min(520px, 100%);
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: var(--shadow-lg);
+      transform: scale(0.95);
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .modal.open .modal-box {
+      transform: scale(1);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 18px;
+      right: 20px;
+      font-size: 26px;
+      line-height: 1;
+      color: var(--muted);
+    }
+
+    .modal-close:hover {
+      color: var(--ink);
+    }
+
+    .amount-pills {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin: 18px 0;
+    }
+
+    .amount-pill {
+      border: 1.5px solid var(--line);
+      border-radius: 12px;
+      padding: 12px;
+      text-align: center;
+      font-weight: 700;
+      font-size: 17px;
+      color: var(--green);
+    }
+
+    .amount-pill.active {
+      border-color: var(--orange);
+      background: var(--rose);
+      color: var(--orange);
+    }
+
+    .custom-amt {
+      width: 100%;
+      padding: 12px 16px;
+      border-radius: 12px;
+      border: 1.5px solid var(--line);
+      font-size: 15px;
+      font-family: inherit;
+      margin-bottom: 16px;
+    }
+
+    .custom-amt:focus {
+      outline: none;
+      border-color: var(--orange);
+    }
+
+    .impact-calc {
+      background: var(--sage);
+      color: var(--green2);
+      padding: 12px 16px;
+      border-radius: 10px;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    /* --------------------------------------------------
+       Responsive Breakpoints
+       -------------------------------------------------- */
+    @media (max-width: 1000px) {
+      .container { width: min(92%, 1220px); }
+      nav { gap: 20px; }
+      .header-actions { gap: 12px; }
+      h1 { font-size: 48px; }
+      .hero-image { width: 68%; }
+      .hero::after { width: 66%; }
+      .statbar { padding: 20px; }
+      .stat { padding: 5px 16px; }
+      .stat strong { font-size: 26px; }
+      .icon { width: 65px; height: 65px; }
+      .icon svg { width: 28px; height: 28px; }
+    }
+
+    @media (max-width: 768px) {
+      header { height: 78px; }
+      nav, .header-actions .lang-container { display: none; }
+      .menu { display: block; }
+      .header-actions { margin-left: auto; }
+      .donate { padding: 10px 18px; font-size: 14px; }
+      .hero { min-height: 680px; align-items: flex-start; }
+      .hero-image { width: 100%; height: 410px; top: auto; bottom: 0; }
+      .hero::after {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, 
+          var(--cream) 0%, 
+          rgba(251, 248, 240, 0.97) 46%, 
+          rgba(251, 248, 240, 0.15) 78%, 
+          transparent 100%
+        );
+      }
+      .hero-content { width: auto; padding: 40px 0 0; }
+      h1 { font-size: 40px; margin: 16px 0; }
+      .hero-copy { font-size: 16.5px; max-width: 390px; }
+      .stats { margin-top: 0; }
+      .statbar { grid-template-columns: 1fr; gap: 6px; padding: 14px 20px; }
+      .stat { border-right: 0; border-bottom: 1px solid #eee; padding: 14px 0; }
+      .stat:last-child { border-bottom: 0; }
+      .programs { grid-template-columns: 1fr; }
+      .card { min-height: 0; }
+      section { padding: 56px 0; }
+      .section-top { display: block; }
+      .view { display: inline-flex; margin-top: 14px; }
+      h2 { font-size: 32px; }
+      .impact-grid { grid-template-columns: 1fr; gap: 36px; }
+      .project { grid-template-columns: 1fr; }
+      .project-side { text-align: left; align-items: flex-start; }
+      .cta { padding: 40px 28px; display: block; }
+      .cta .primary { margin-top: 20px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+      .copyright { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="top-banner" role="complementary">
+    <div class="container">
+      🌱 <strong>2026 Winter Drive:</strong> Helping 200 high school learners with books, uniforms, and study support.
+      <a href="#projects">Back this drive &rarr;</a>
+    </div>
+  </aside>
+
+  <!-- Navigation Header -->
+  <div id="site-header"></div>
+  <script src="assets/js/includes.js"></script>
+    <div class="container nav">
+      <!-- Brand Logo -->
+      <a class="logo" href="#home" aria-label="Mazakha Foundation Homepage">
+        <svg viewBox="0 0 240 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g>
+            <path d="M22 42C22 42 18 32 18 23C18 13 25 6 25 6C25 6 32 13 32 23C32 32 28 42 28 42H22Z" fill="#184d16"/>
+            <path d="M16 40C16 40 9 34 8 26C6 18 12 12 12 12C12 12 17 18 17 26C17 31 17 36 17 40H16Z" fill="#e8491b"/>
+            <path d="M34 40C34 40 41 34 42 26C44 18 38 12 38 12C38 12 33 18 33 26C33 31 33 36 33 40H34Z" fill="#9a6218"/>
+            <circle cx="25" cy="46" r="3" fill="#184d16"/>
+          </g>
+          <text x="56" y="28" font-family="'Playfair Display', Georgia, serif" font-size="22" font-weight="700" letter-spacing="1" fill="#184d16">MAZAKHA</text>
+          <text x="57" y="42" font-family="'DM Sans', sans-serif" font-size="9.5" font-weight="800" letter-spacing="3" fill="#e8491b">FOUNDATION</text>
+        </svg>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav id="site-nav" aria-label="Main Navigation">
+        <a class="active" href="#home">Home</a>
+        <a href="#programs">Programs</a>
+        <a href="#impact">Impact</a>
+        <a href="#projects">Projects</a>
+        <a href="#stories">Stories</a>
+        <a href="about.html">About</a>
+      </nav>
+
+      <!-- Action Area -->
+      <div class="header-actions">
+        <button class="donate" type="button" id="open-donate-btn">
+          <span>Donate</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+        </button>
+        
+        <div class="lang-container">
+          <button class="lang" type="button" id="lang-btn" aria-haspopup="true">🌐 &nbsp;<span id="lang-label">EN</span>⌄</button>
+          <div class="lang-dropdown" id="lang-menu">
+            <button class="lang-item active" type="button" data-lang="EN">English (EN)</button>
+            <button class="lang-item" type="button" data-lang="XH">isiXhosa (XH)</button>
+            <button class="lang-item" type="button" data-lang="ZU">isiZulu (ZU)</button>
+            <button class="lang-item" type="button" data-lang="AF">Afrikaans (AF)</button>
+          </div>
+        </div>
+
+        <button class="menu" type="button" aria-label="Open menu" id="menu-btn">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="home">
+    <!-- Hero Section -->
+    <section class="hero" style="background-image:url('assets/images/hero-community.jpg');background-size:cover;background-position:center 30%;position:relative;padding:60px 0">
+      <div class="container hero-content">
+        <div class="eyebrow">growth <span>·</span> youth <span>·</span> community</div>
+        <h1>Planting the roots of tomorrow’s leaders</h1>
+        <p class="hero-copy">Mazakha Foundation invests in young people through youth empowerment, We Are Human and community development programs.</p>
+        <div class="buttons">
+          <a class="btn primary" href="#programs">Support a program &rarr;</a>
+          <a class="btn secondary" href="about.html">Our story</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impact Stats Bar -->
+    <div class="container stats">
+      <div class="statbar">
+        <!-- Stat 1 -->
+        <div class="stat">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 4 13C4 6 11 3 20 3c0 9-3 16-9 17Z"/><path d="M11 20v-7"/></svg>
+          </div>
+          <div>
+            <strong>1,240+</strong>
+            <b>youth mentored</b>
+            <small>Guided, supported, empowered</small>
+          </div>
+        </div>
+
+        <!-- Stat 2 -->
+        <div class="stat">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          </div>
+          <div>
+            <strong>86</strong>
+            <b>scholarships funded</b>
+            <small>Opening doors to education</small>
+          </div>
+        </div>
+
+        <!-- Stat 3 -->
+        <div class="stat">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div>
+            <strong>14</strong>
+            <b>communities reached</b>
+            <small>Stronger together</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Programs Section -->
+    <section id="programs">
+      <div class="container">
+        <div class="section-top">
+          <div>
+            <div class="section-label orange">our programs</div>
+            <h2>Where growth happens</h2>
+          </div>
+          <a class="view" href="#projects">View all programs &rarr;</a>
+        </div>
+
+        <div class="programs">
+          <!-- Program 1 -->
+          <article class="card green">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#275f20" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3>Youth mentorship</h3>
+            <p>1-on-1 mentoring pairing local leaders with young people, running weekly across 6 communities.</p>
+            <a class="learn" href="#stories">Learn more &rarr;</a>
+          </article>
+
+          <!-- Program 2 -->
+          <article class="card gold">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#9a6218" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            </div>
+            <h3>Education access</h3>
+            <p>Scholarships, school supplies and after-school study support to ensure every learner thrives.</p>
+            <a class="learn" href="#projects">Learn more &rarr;</a>
+          </article>
+
+          <!-- Program 3 -->
+          <article class="card rust">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#a63d24" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3>Community growth</h3>
+            <p>Small local projects, food gardens and youth spaces designed and led by the youth we serve.</p>
+            <a class="learn" href="#impact">Learn more &rarr;</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impact & Story Section -->
+    <section class="impact" id="impact">
+      <div class="container impact-grid">
+        <div class="impact-copy">
+          <div class="section-label green">our impact</div>
+          <h2>Growth you can see</h2>
+          <p>Our work is built around practical opportunities that help young people grow into confident leaders and strengthen the communities around them.</p>
+          <a class="btn primary" href="#stories">See our stories &rarr;</a>
+        </div>
+        
+        <div class="story-list" id="stories">
+          <!-- Story 1 -->
+          <article class="story" onclick="showStory('thandiwe')">
+            <div class="round">
+              <img src="assets/images/5-DSC06672.jpg" alt="Thandiwe portrait">
+            </div>
+            <div>
+              <h3>Thandiwe’s story</h3>
+              <p>From mentee to mentor, now leading her own community project training 40 schoolgirls.</p>
+            </div>
+          </article>
+
+          <!-- Story 2 -->
+          <article class="story" onclick="showStory('sipho')">
+            <div class="round">
+              <img src="assets/images/87-9A7A6379.jpg" alt="Sipho portrait">
+            </div>
+            <div>
+              <h3>Sipho’s story</h3>
+              <p>First in his family to finish school with 5 distinctions via a Mazakha scholarship, now studying engineering.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <div class="container">
+        <div class="section-top">
+          <div>
+            <div class="section-label gold">projects</div>
+            <h2>Initiatives you can back today</h2>
+          </div>
+        </div>
+
+        <div class="projects">
+          <!-- Project 1 -->
+          <article class="project">
+            <div>
+              <h3>Winter school supplies drive</h3>
+              <p>Providing books, uniforms and stationery to 200 learners before the winter term starts.</p>
+              <div class="progress"><span style="width:64%"></span></div>
+              <div class="project-meta">R64,000 raised of R100,000 · 18 days left</div>
+            </div>
+            <div class="project-side">
+              <span class="badge">active</span>
+              <button class="back-btn" onclick="openDonate('Winter school supplies drive')">Back this initiative &rarr;</button>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project">
+            <div>
+              <h3>Youth centre roof repair</h3>
+              <p>Fixing storm damage and adding solar lighting at our main community mentorship venue.</p>
+              <div class="progress"><span style="width:77%"></span></div>
+              <div class="project-meta">R38,500 raised of R50,000 · 42 days left</div>
+            </div>
+            <div class="project-side">
+              <span class="badge">active</span>
+              <button class="back-btn" onclick="openDonate('Youth centre roof repair')">Back this initiative &rarr;</button>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project">
+            <div>
+              <h3>Summer leadership camp 2026</h3>
+              <p>A week-long wilderness immersion camp for 60 youth leaders, fully funded by our donors.</p>
+              <div class="progress"><span style="width:100%"></span></div>
+              <div class="project-meta">R80,000 raised of R80,000 · closed</div>
+            </div>
+            <div class="project-side">
+              <span class="badge">completed</span>
+              <span style="font-size:12.5px; color:#777;">Goal Achieved!</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- About & CTA Banner -->
+    <section id="about">
+      <div class="container">
+        <div class="cta" id="donate">
+          <div>
+            <div class="section-label" style="color:#c7ddba">grow with us</div>
+            <h2>Help plant the roots of tomorrow.</h2>
+            <p>Every contribution helps create opportunities for young people to learn, lead and build stronger communities across South Africa.</p>
+          </div>
+          <button class="btn primary" onclick="openDonate('General Youth Fund')">Support a program</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">
+            <svg viewBox="0 0 240 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g>
+                <path d="M22 42C22 42 18 32 18 23C18 13 25 6 25 6C25 6 32 13 32 23C32 32 28 42 28 42H22Z" fill="#184d16"/>
+                <path d="M16 40C16 40 9 34 8 26C6 18 12 12 12 12C12 12 17 18 17 26C17 31 17 36 17 40H16Z" fill="#e8491b"/>
+                <path d="M34 40C34 40 41 34 42 26C44 18 38 12 38 12C38 12 33 18 33 26C33 31 33 36 33 40H34Z" fill="#9a6218"/>
+                <circle cx="25" cy="46" r="3" fill="#184d16"/>
+              </g>
+              <text x="56" y="28" font-family="'Playfair Display', Georgia, serif" font-size="22" font-weight="700" fill="#184d16">MAZAKHA</text>
+              <text x="57" y="42" font-family="'DM Sans', sans-serif" font-size="9.5" font-weight="800" letter-spacing="3" fill="#e8491b">FOUNDATION</text>
+            </svg>
+          </div>
+          <p>Growth · youth · community</p>
+          <p style="margin-top:8px; font-size:13px;">Section 18A PBO No. 930074122</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <a href="#programs">Programs</a>
+          <a href="#impact">Impact</a>
+          <a href="#projects">Projects</a>
+        </div>
+        <div>
+          <h4>Stories</h4>
+          <a href="#stories">Youth stories</a>
+          <a href="#about">Our story</a>
+          <a href="#donate">Donate</a>
+        </div>
+        <div>
+          <h4>Connect</h4>
+          <a href="mailto:hello@mazakha.org">hello@mazakha.org</a>
+          <a href="#home">Cape Town &amp; Gqeberha</a>
+          <a href="#home">South Africa</a>
+        </div>
+      </div>
+      <div class="copyright">
+        <span>© 2026 Mazakha Foundation. Building opportunities, one young person at a time.</span>
+        <span>Section 18A Tax Deductible</span>
+      </div>
+    </div>
+  <div id="site-footer"></div>
+
+  <!-- ========================================== -->
+  <!-- Donation Modal -->
+  <!-- ========================================== -->
+  <div class="modal" id="donate-modal">
+    <div class="modal-overlay" onclick="closeModals()"></div>
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModals()" aria-label="Close">&times;</button>
+      <div class="section-label orange">invest in youth</div>
+      <h3 style="font-size:24px; color:var(--green); margin-bottom:6px;">Make an Impact</h3>
+      <p id="target-project-label" style="font-size:14.5px; color:#666; margin-bottom:14px;">Supporting general youth development &amp; mentorship.</p>
+      
+      <div class="amount-pills">
+        <button type="button" class="amount-pill active" onclick="setAmt(150, this)">R150</button>
+        <button type="button" class="amount-pill" onclick="setAmt(350, this)">R350</button>
+        <button type="button" class="amount-pill" onclick="setAmt(750, this)">R750</button>
+        <button type="button" class="amount-pill" onclick="setAmt(1500, this)">R1,500</button>
+      </div>
+
+      <input type="number" class="custom-amt" id="custom-amt-input" placeholder="Or custom amount in Rands (ZAR)" oninput="customAmtChange(this.value)">
+
+      <div class="impact-calc" id="impact-text">
+        🌱 <strong>R150</strong> provides full stationery and study notebooks for 1 learner.
+      </div>
+
+      <button class="btn primary" style="width:100%;" onclick="confirmDonation()">Complete Secure Donation</button>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- Story Reader Modal -->
+  <!-- ========================================== -->
+  <div class="modal" id="story-modal">
+    <div class="modal-overlay" onclick="closeModals()"></div>
+    <div class="modal-box" style="max-width:580px;">
+      <button class="modal-close" onclick="closeModals()" aria-label="Close">&times;</button>
+      <div id="story-modal-content"></div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    // Mobile navigation toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const nav = document.getElementById('site-nav');
+    menuBtn.addEventListener('click', () => {
+      const visible = nav.style.display === 'flex';
+      nav.style.cssText = visible ? '' : 'display:flex;position:absolute;top:78px;left:0;right:0;background:#fffdf7;padding:22px 7%;flex-direction:column;gap:14px;border-bottom:1px solid #ddd;box-shadow:0 12px 30px rgba(0,0,0,0.1);z-index:40';
+    });
+
+    // Language selector dropdown
+    const langBtn = document.getElementById('lang-btn');
+    const langMenu = document.getElementById('lang-menu');
+    const langLabel = document.getElementById('lang-label');
+
+    langBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      langMenu.classList.toggle('show');
+    });
+
+    document.querySelectorAll('.lang-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const lang = item.getAttribute('data-lang');
+        langLabel.textContent = lang;
+        document.querySelectorAll('.lang-item').forEach(i => i.classList.remove('active'));
+        item.classList.add('active');
+        langMenu.classList.remove('show');
+      });
+    });
+
+    document.addEventListener('click', () => {
+      langMenu.classList.remove('show');
+    });
+
+    // Donation Modal Controls
+    let currentAmt = 150;
+    const donateModal = document.getElementById('donate-modal');
+    const openDonateBtn = document.getElementById('open-donate-btn');
+    const targetProjectLabel = document.getElementById('target-project-label');
+    const impactText = document.getElementById('impact-text');
+
+    function openDonate(projectName = 'General Youth Fund') {
+      targetProjectLabel.textContent = `Supporting: ${projectName}`;
+      donateModal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    if (openDonateBtn) {
+      openDonateBtn.addEventListener('click', () => openDonate());
+    }
+
+    function closeModals() {
+      document.querySelectorAll('.modal').forEach(m => m.classList.remove('open'));
+      document.body.style.overflow = '';
+    }
+
+    function setAmt(val, btn) {
+      currentAmt = val;
+      document.querySelectorAll('.amount-pill').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('custom-amt-input').value = '';
+      updateImpact(val);
+    }
+
+    function customAmtChange(val) {
+      const num = parseInt(val, 10);
+      if (num > 0) {
+        currentAmt = num;
+        document.querySelectorAll('.amount-pill').forEach(b => b.classList.remove('active'));
+        updateImpact(num);
+      }
+    }
+
+    function updateImpact(amt) {
+      if (amt < 250) {
+        impactText.innerHTML = `🌱 <strong>R${amt}</strong> provides full stationery and study notebooks for 1 learner.`;
+      } else if (amt < 600) {
+        impactText.innerHTML = `🌱 <strong>R${amt}</strong> funds 1 month of weekly 1-on-1 mentorship sessions and materials.`;
+      } else if (amt < 1200) {
+        impactText.innerHTML = `🌱 <strong>R${amt}</strong> provides after-school STEM tutoring and nutritious meal packs.`;
+      } else {
+        impactText.innerHTML = `🌱 <strong>R${amt}</strong> covers a full term education scholarship including fees and uniforms.`;
+      }
+    }
+
+    function confirmDonation() {
+      alert(`Enkosi kakhulu! Thank you for your generous pledge of R${currentAmt}. You will be redirected to the secure payment portal.`);
+      closeModals();
+    }
+
+    // Story Modal Details
+    const storyData = {
+      thandiwe: {
+        title: "Thandiwe’s Journey",
+        role: "Mentorship Alumna & Community Leader",
+        img: "assets/images/5-DSC06672.jpg",
+        text: "Thandiwe joined Mazakha Foundation in Grade 10. Paired with a mentor in technology, she gained confidence and digital literacy. Today, she runs the Unity Creation Lab, teaching 40 schoolgirls coding and design every weekend."
+      },
+      sipho: {
+        title: "Sipho’s Journey",
+        role: "Scholarship Recipient & Engineering Student",
+        img: "assets/images/87-9A7A6379.jpg",
+        text: "With the help of a Mazakha Education Scholarship, Sipho received textbooks, daily transport, and after-school academic support. He graduated with 5 distinctions and is now in his second year studying Civil Engineering at UCT."
+      }
+    };
+
+    function showStory(key) {
+      const data = storyData[key];
+      if (!data) return;
+      const content = document.getElementById('story-modal-content');
+      content.innerHTML = `
+        <div class="section-label green">${data.role}</div>
+        <h3 style="font-size:24px; color:var(--green); margin-bottom:12px;">${data.title}</h3>
+        <img src="${data.img}" alt="${data.title}" style="width:100%; height:220px; object-fit:cover; border-radius:14px; margin-bottom:16px;">
+        <p style="font-size:15.5px; color:#444; line-height:1.6; margin-bottom:20px;">${data.text}</p>
+        <button class="btn primary" style="width:100%;" onclick="openDonate('Youth Mentorship & Scholarships')">Support Students Like ${data.title.split('’')[0]}</button>
+      `;
+      document.getElementById('story-modal').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModals();
+    });
+  </script>
+</body>
+</html>
